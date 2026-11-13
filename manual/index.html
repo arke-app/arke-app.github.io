@@ -8,13 +8,13 @@
 <style>
 /* Layout: a field manual — sticky chapter rail on the left, reading column with phone screenshots set beside the steps. */
 :root {
-  --bg: #f3f8f6;
+  --bg: #f4f6f9;
   --surface: #ffffff;
-  --ink: #0c1a16;
-  --muted: #4f645d;
-  --line: #d3e3dd;
-  --neon: #00806a;
-  --neon-soft: #dcf5ee;
+  --ink: #121822;
+  --muted: #5a6577;
+  --line: #dde3eb;
+  --neon: #465a7d;
+  --neon-soft: #e3e9f3;
   --ok: #138a4b;
   --warn: #b35c00;
   --bad: #c62828;
@@ -25,14 +25,14 @@
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #07100e; --surface: #0f1b18; --ink: #e9f7f2; --muted: #9bb8ae; --line: #1f332d;
-    --neon: #46e6b4; --neon-soft: #0d3328; --ok: #42d48a; --warn: #ffad4d; --bad: #ff6b6b;
+    --bg: #0b0e13; --surface: #141922; --ink: #eef2f8; --muted: #a3aec0; --line: #263040;
+    --neon: #96acd0; --neon-soft: #1c2636; --ok: #42d48a; --warn: #ffad4d; --bad: #ff6b6b;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #07100e; --surface: #0f1b18; --ink: #e9f7f2; --muted: #9bb8ae; --line: #1f332d;
-  --neon: #46e6b4; --neon-soft: #0d3328; --ok: #42d48a; --warn: #ffad4d; --bad: #ff6b6b;
+  --bg: #0b0e13; --surface: #141922; --ink: #eef2f8; --muted: #a3aec0; --line: #263040;
+  --neon: #96acd0; --neon-soft: #1c2636; --ok: #42d48a; --warn: #ffad4d; --bad: #ff6b6b;
   color-scheme: dark;
 }
 
@@ -124,7 +124,7 @@ footer { border-top: 1px solid var(--line); padding-block: 24px 40px; color: var
 @media print {
   :root, :root[data-theme="dark"], :root:not([data-theme="light"]) {
     --bg: #ffffff; --surface: #ffffff; --ink: #111827; --muted: #4b5568; --line: #d5dce6;
-    --neon: #00735f; --neon-soft: #e3f5ef; --ok: #138a4b; --warn: #b35c00; --bad: #c62828;
+    --neon: #465a7d; --neon-soft: #e3e9f3; --ok: #138a4b; --warn: #b35c00; --bad: #c62828;
     color-scheme: light;
   }
   * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
