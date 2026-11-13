@@ -248,6 +248,7 @@ nav.top a:not(.home):hover, nav.top a[aria-current] { color: var(--neon); }
             <li><strong>Appearance</strong>: dark or light; the colour of your messages (green by default) and of received ones (blue by default); <strong>My colour</strong>, the colour of your name and your dot on the map as the others see them (it goes to every chat by itself); names on the map, on or off; and the text size. Arke itself is bluish grey, like its icon.</li>
             <li><strong>Full Version</strong> (chapter 11).</li>
             <li><strong>Networks</strong>: the internet relay (chapter 10) and the Meshtastic radio (chapter 09).</li>
+            <li><strong>Offline Maps</strong>: the map's streets kept on the phone (chapter 08).</li>
             <li><strong>About Arke</strong>: the emergency notice, trademarks and open-source licences.</li>
           </ul>
         </div>
@@ -453,7 +454,8 @@ nav.top a:not(.home):hover, nav.top a[aria-current] { color: var(--neon); }
             <li><strong>OK</strong>, <strong>Danger</strong>, <strong>Help</strong>: tells the chat how you are, with where you are. It shows as a coloured ring around your dot and as a message in the chat.</li>
             <li><strong>Pin Where I Am</strong> or <strong>Pin Somewhere Else</strong>: for somewhere else, move the map until the pin in the middle is on the place, then tap ✓. Choose what it is: danger, shelter, water, first aid or meeting point, with a few words.</li>
           </ul>
-          <p>You can also touch and hold the map to put a pin there. Tap a person or a pin for details; anyone can take a pin off. The streets you’ve looked at with internet stay on the phone, so the map still shows them without it.</p>
+          <p>You can also touch and hold the map to put a pin there. A pin stands just above its place on a short stem, so whoever is on that spot still shows underneath, with their name. Tap a person or a pin for details; anyone can take a pin off.</p>
+          <p>At the top, <strong>➤</strong> brings the map back to where you are, and <strong>⤢ See Everyone</strong> fits everyone and every pin on the screen at once. A place or a pin in a message opens the map right there.</p>
         </div>
         <figure>
           <img src="img/map-menu.jpg" alt="The chat map with the Map Options panel: Share My Location, OK, Danger, Help, Pin Where I Am and Pin Somewhere Else" loading="lazy">
@@ -469,6 +471,14 @@ nav.top a:not(.home):hover, nav.top a[aria-current] { color: var(--neon); }
           <p>Positions shared live expire after 30 minutes without news. Over the radio, positions go only every 10 minutes and only when the radio is the only network, to save airtime.</p>
         </div>
       </div>
+      <h3>Offline maps</h3>
+      <p>The streets around the places your chats use (where you are, positions and pins people share, places sent in messages) are kept on the phone, so the map works without internet. They download on their own while there’s internet. <strong>⚙︎ Settings → Offline Maps</strong>:</p>
+      <ul>
+        <li><strong>Save an Area…</strong>: move and zoom the map so the area you want fills the screen, or tap <strong>Around Me</strong> or a country, then <strong>Save This Area</strong>. A small area keeps every street; a big one, the main roads. Arke tells you if the area is already saved.</li>
+        <li><strong>See Saved Areas on the Map</strong> shows them all outlined in blue; tap a saved area to see just that one.</li>
+        <li>The share button next to a saved area sends it to a chat. The others tap <strong>Save Area for Offline</strong> on the card, so everyone has the same streets before the network goes.</li>
+      </ul>
+      <p>Save areas while there’s internet: a trip ahead, the city, the region. Map data © OpenStreetMap contributors, via OpenFreeMap.</p>
     </section>
 
     <!-- 09 -->
@@ -568,6 +578,8 @@ nav.top a:not(.home):hover, nav.top a[aria-current] { color: var(--neon); }
             <tr><td>React, reply, forward, edit, delete</td><td>Touch and hold the message</td></tr>
             <tr><td>See where a message went</td><td>Tap your message</td></tr>
             <tr><td>Share where you are, say how you are, put a pin</td><td>Chat → map → round button at the bottom</td></tr>
+            <tr><td>See everyone on the map</td><td>Chat → map → ⤢ at the top</td></tr>
+            <tr><td>Save a map area for offline</td><td>⚙︎ Settings → Offline Maps → Save an Area…</td></tr>
             <tr><td>Check the safety code</td><td>Top of the chat, or chat → ⓘ</td></tr>
             <tr><td>Your number for SMS</td><td>⚙︎ Settings → Your Phone Number</td></tr>
             <tr><td>Link a Meshtastic radio</td><td>⚙︎ Settings → Meshtastic Radio → Search for Radios</td></tr>
