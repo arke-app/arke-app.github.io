@@ -373,6 +373,8 @@ nav.top a:not(.home):hover, nav.top a[aria-current] { color: var(--neon); }
         <div>
           <p class="intro">Open a chat, type a message and tap the <strong>Send</strong> arrow. The <strong>+</strong> next to the box adds a photo, a file or your location.</p>
           <p>Messages are short, up to 140 bytes: about 140 letters without accents, fewer with accents or emoji. This keeps each message small enough for a single Meshtastic radio packet and a short text message. As you get close, a counter shows how much is left. Photos and files go only over the internet and phones nearby.</p>
+          <p><strong>Voice messages:</strong> with the box empty, the Send arrow becomes a <strong>🎤</strong>. Tap it and speak, up to one minute; then <strong>↑</strong> sends it and 🗑 throws it away. Like photos, voice messages go only over the internet and phones nearby, never by SMS or radio. Tap ▶︎ on one to listen.</p>
+          <p><strong>From Photos or another app:</strong> Share → <strong>Arke</strong>, then pick the chat. On Android the chat opens with the photo ready to send; on iPhone, open Arke and it’s there, ready to send.</p>
           <ul>
             <li><strong>Messages you receive</strong> show the sender’s name above, and the time and the network they came in on below: <em>via Internet</em>, <em>via Radio</em>, <em>via Phone nearby</em> or <em>via SMS</em>.</li>
             <li><strong>Messages you send</strong> list every network they have gone out on so far, for example <em>Internet · 2 phones · Radio</em>. Until one takes it, the message shows <em>Waiting for a network</em>.</li>
@@ -393,7 +395,7 @@ nav.top a:not(.home):hover, nav.top a[aria-current] { color: var(--neon); }
         <div>
           <p>Touch and hold a message:</p>
           <ul>
-            <li><strong>Reactions</strong>: tap 👍 ❤️ 😂 😮 😢 🙏, or <strong>+</strong> for any emoji. Reactions show under the message, with how many people put each one; tap yours there to take it off.</li>
+            <li><strong>Reactions</strong>: tap 👍 ❤️ 😂 😮 😢 🙏, or <strong>+</strong> for any emoji. Reactions show under the message, with how many people put each one. Tap them to see who reacted with what; <strong>Remove</strong> takes yours off.</li>
             <li><strong>Reply</strong>: your answer shows the message it answers in a box above it. Tap the box to jump to the original.</li>
             <li><strong>Forward</strong>: sends a copy to another chat (text, place, photo or file), marked <em>Forwarded</em>.</li>
             <li><strong>Copy</strong> the text.</li>
@@ -426,6 +428,8 @@ nav.top a:not(.home):hover, nav.top a[aria-current] { color: var(--neon); }
         <li>To send an earlier message by SMS, touch and hold it and tap <strong>Send as SMS</strong>.</li>
       </ol>
       <p>The text holds the sealed message as a link, <code>https://arke-app.github.io/m/#…</code>. The person taps it and the message opens in the chat in Arke. What the link carries comes after the <code>#</code>, which never reaches the website. If the link can’t be tapped, copy the whole text, then in Arke tap <strong>✎ → Join a Chat → Paste</strong>.</p>
+      <h3>Passed on to the whole chat</h3>
+      <p>When someone opens your SMS in Arke, their phone passes the message on over the internet and to phones nearby (when it has no internet, as soon as it does). So people in the chat who gave no number get it too. On their phones it shows in a light grey bubble, with <strong>“Ana · shared by Rui”</strong>: who wrote it, and who passed it on.</p>
       <h3>Someone only SMS reaches</h3>
       <p>If someone in the chat has lately only been heard by SMS (their phone has no data, for example), <strong>Send</strong> asks first: <strong>Only by SMS</strong> (to everyone in the chat) or <strong>Only Other Networks</strong> (internet, phones nearby and radio). That way a message never goes out twice, and nobody is left without it.</p>
       <div class="note"><p>Arke can’t read your text messages, on iPhone or Android: a text reaches the chat when you tap its link. Whether an SMS is delivered depends on the phone network.</p></div>
