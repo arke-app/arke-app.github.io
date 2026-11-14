@@ -186,12 +186,12 @@ nav.top a:not(.home):hover, nav.top a[aria-current] { color: var(--neon); }
     <span class="eyebrow">User manual · iPhone and Android · Encrypted chat</span>
   </div>
   <h1>Arke Manual</h1>
-  <p class="lede">Arke is an encrypted group chat that sends every message every way it can at the same time: as a text message, over the internet, from phone to phone over Bluetooth and Wi-Fi, and over a Meshtastic® radio. More ways mean more chances to get through — but no way is a promise. Whatever the network, only people in the chat can read them. iPhone and Android phones can be in the same chat.</p>
+  <p class="lede">Arke is an encrypted group chat with more ways to talk: as a text message, over the internet and from phone to phone over Bluetooth and Wi-Fi, and over a Meshtastic® radio. Each chat has a tab for each way — SMS, Data and Mesh — and what you write in a tab goes only that way. More ways mean more chances to get through — but no way is a promise. Whatever the way, only people in the chat can read the messages. iPhone and Android phones can be in the same chat.</p>
 
   <div class="tour">
     <video controls preload="metadata" poster="img/poster.jpg?v=17" src="../media/Arke-Tour.mp4?v=17"></video>
     <img class="print-only" src="img/poster.jpg?v=17" alt="Opening frame of the Arke video tour">
-    <p>Video tour, 2 minutes 57 seconds, narrated. It starts a chat, invites people with a QR code, and sends a message on all four networks.</p>
+    <p>Video tour, about 3 minutes, narrated. It starts a chat, invites people with a QR code, and shows the three tabs, the map and the networks.</p>
   </div>
 </header>
 
@@ -257,12 +257,18 @@ nav.top a:not(.home):hover, nav.top a[aria-current] { color: var(--neon); }
 
     <!-- 02 -->
     <section class="ch" id="networks">
-      <h2><span class="num">02</span>The four networks</h2>
+      <h2><span class="num">02</span>Networks and tabs</h2>
       <div class="pair">
         <div>
           <p class="intro">At the top of the chat list, <strong>Networks</strong> shows four icons: SMS, Internet, Nearby and Radio. Their colour says which work right now.</p>
           <p><span class="dot ok"></span>Green: working now. <span class="dot warn"></span>Orange: waiting, for example no phones in range yet. <span class="dot off"></span>Grey: not available, for example no number in Settings for SMS. An icon that’s struck through is switched off.</p>
-          <p>When you tap <strong>Send</strong>, the message goes out on every network that works at that moment (SMS has its own button). On networks that aren’t working, it waits and goes out as soon as they are. A message that reaches your phone one way is passed on the other ways, so it can jump from the radio to the internet or from the internet to phones nearby.</p>
+          <p><strong>Each chat has three tabs</strong>, in a row just above the message box:</p>
+          <ul>
+            <li><strong>SMS</strong> (💬): text messages. Send opens your messages app with the message as a sealed link. Text and your location only.</li>
+            <li><strong>Data</strong> (📶): the internet, and phones nearby with no network at all. Text, photos, files, voice messages and your location.</li>
+            <li><strong>Mesh</strong> (📡): the Meshtastic radio. Short text and your location.</li>
+          </ul>
+          <p>A tab shows only its own messages, and what you write in it goes only its way. Each tab keeps its own draft. When a message comes in on another tab, that tab’s icon blinks with a number until you open it. The map, statuses (OK, Danger, Help) and pins belong to the whole chat: they show in every tab. If a tab can’t send right now (its network off, no number for SMS, no radio linked), it says why above the message box. A message that reaches your phone one way can be passed on another way so more people get it, but it always shows in the tab it was written in.</p>
           <p>Tap the icons for the <strong>Networks</strong> page, with each network in words. Touch and hold a network there to switch it off or on, for example to test a single network or to save battery.</p>
         </div>
         <figure>
@@ -373,9 +379,9 @@ nav.top a:not(.home):hover, nav.top a[aria-current] { color: var(--neon); }
       <h2><span class="num">05</span>Sending and reading</h2>
       <div class="pair">
         <div>
-          <p class="intro">Open a chat, type a message and tap the <strong>Send</strong> arrow. The <strong>+</strong> next to the box adds a photo, a file or your location.</p>
-          <p>Messages are short, up to 140 bytes: about 140 letters without accents, fewer with accents or emoji. This keeps each message small enough for a single Meshtastic radio packet and a short text message. As you get close, a counter shows how much is left. Photos and files go only over the internet and phones nearby.</p>
-          <p><strong>Voice messages:</strong> with the box empty, the Send arrow becomes a <strong>🎤</strong>. Tap it and speak, up to one minute; then <strong>↑</strong> sends it and 🗑 throws it away. Like photos, voice messages go only over the internet and phones nearby, never by SMS or radio. Tap ▶︎ on one to listen.</p>
+          <p class="intro">Open a chat, choose a tab (chapter 02), type a message and tap the <strong>Send</strong> arrow. In the Data tab, the <strong>+</strong> next to the box adds a photo, a file or your location; in SMS and Mesh, <strong>📍</strong> adds your location.</p>
+          <p>Messages are short, up to 140 bytes: about 140 letters without accents, fewer with accents or emoji. This keeps each message small enough for a single Meshtastic radio packet and a short text message. As you get close, a counter shows how much is left. Photos, files and voice messages go only in the Data tab.</p>
+          <p><strong>Voice messages:</strong> in the Data tab, with the box empty, the Send arrow becomes a <strong>🎤</strong>. Tap it and speak, up to one minute (bars move as it hears you); then <strong>↑</strong> sends it and 🗑 throws it away. Like photos, voice messages go only over the internet and phones nearby, never by SMS or radio. Tap ▶︎ on one to listen.</p>
           <p><strong>From Photos or another app:</strong> Share → <strong>Arke</strong>, then pick the chat. On Android the chat opens with the photo ready to send; on iPhone, open Arke and it’s there, ready to send.</p>
           <ul>
             <li><strong>Messages you receive</strong> show the sender’s name above, and the time and the network they came in on below: <em>via Internet</em>, <em>via Radio</em>, <em>via Phone nearby</em> or <em>via SMS</em>.</li>
@@ -403,7 +409,7 @@ nav.top a:not(.home):hover, nav.top a[aria-current] { color: var(--neon); }
             <li><strong>Copy</strong> the text.</li>
             <li><strong>Edit</strong>: your own text messages, up to 15 minutes after sending. Everyone sees the new text, marked <em>Edited</em>.</li>
             <li><strong>Delete</strong>: <em>Delete for Me</em> takes it off your phone only. <em>Delete for Everyone</em> (your own messages, up to 48 hours after sending, while they’re still travelling) leaves “This message was deleted” on everyone’s phone.</li>
-            <li>On your own messages: <strong>Send as SMS</strong> and <strong>Delivery</strong>.</li>
+            <li>On your own messages: <strong>Delivery</strong>, and in the SMS tab <strong>Send as SMS</strong> (again, if it didn’t go).</li>
           </ul>
           <div class="note"><p><strong>Text messages can’t be changed.</strong> A message that went or came as an SMS can’t be edited or deleted for everyone: that copy is already in people’s messages apps.</p></div>
         </div>
@@ -426,21 +432,20 @@ nav.top a:not(.home):hover, nav.top a[aria-current] { color: var(--neon); }
       <p class="intro">SMS needs only a mobile signal, which often comes back before mobile data does, and reaches people who are far away.</p>
       <ol class="steps">
         <li>Put your number in <strong>⚙︎ Settings</strong>. Arke sends it, sealed, to the people in your chats, and they send you theirs. That’s how Arke knows who to text.</li>
-        <li>Type your message and tap the <strong>message bubble</strong> next to Send. Your messages app opens with the text and the numbers of everyone in the chat who gave theirs, (chat info shows them under <strong>SMS To</strong>). Tap <strong>Send</strong> there.</li>
-        <li>To send an earlier message by SMS, touch and hold it and tap <strong>Send as SMS</strong>.</li>
+        <li>In the chat, open the <strong>SMS</strong> tab, type your message and tap <strong>Send</strong>. Your messages app opens with the text and the numbers of everyone in the chat who gave theirs (chat info shows them under <strong>SMS To</strong>). Tap <strong>Send</strong> there.</li>
+        <li>If you came back without sending it, touch and hold it and tap <strong>Send as SMS</strong>.</li>
       </ol>
       <p>The text holds the sealed message as a link, <code>https://arke-app.github.io/m/#…</code>. The person taps it and the message opens in the chat in Arke. What the link carries comes after the <code>#</code>, which never reaches the website. If the link can’t be tapped, copy the whole text, then in Arke tap <strong>✎ → Join a Chat → Paste</strong>.</p>
       <h3>Passed on to the whole chat</h3>
       <p>When someone opens your SMS in Arke, their phone passes the message on over the internet and to phones nearby (when it has no internet, as soon as it does). So people in the chat who gave no number get it too. On their phones it shows in a light grey bubble, with <strong>“Ana · shared by Rui”</strong>: who wrote it, and who passed it on.</p>
-      <h3>Someone only SMS reaches</h3>
-      <p>If someone in the chat has lately only been heard by SMS (their phone has no data, for example), <strong>Send</strong> asks first: <strong>Only by SMS</strong> (to everyone in the chat) or <strong>Only Other Networks</strong> (internet, phones nearby and radio). That way a message never goes out twice, and nobody is left without it.</p>
+      
       <div class="note"><p>Arke can’t read your text messages, on iPhone or Android: a text reaches the chat when you tap its link. Whether an SMS is delivered depends on the phone network.</p></div>
     </section>
 
     <!-- 07 -->
     <section class="ch" id="nearby">
       <h2><span class="num">07</span>Phones nearby</h2>
-      <p class="intro">Arke phones find each other over Bluetooth and Wi-Fi with no network at all: no mobile signal, no router, no internet. iPhones and Android phones reach each other over Bluetooth.</p>
+      <p class="intro">Phones nearby are part of the <strong>Data</strong> tab. Arke phones find each other over Bluetooth and Wi-Fi with no network at all: no mobile signal, no router, no internet. iPhones and Android phones reach each other over Bluetooth.</p>
       <ul>
         <li><strong>Every Arke phone is a carrier.</strong> It keeps every sealed message it meets, from any chat, and hands it to every Arke phone it meets later. A message can walk across town in a neighbour’s pocket.</li>
         <li>Carried messages expire after <strong>48 hours</strong>. Each phone carries up to 500 messages, dropping the oldest first.</li>
@@ -460,8 +465,10 @@ nav.top a:not(.home):hover, nav.top a[aria-current] { color: var(--neon); }
             <li><strong>OK</strong>, <strong>Danger</strong>, <strong>Help</strong>: tells the chat how you are, with where you are. It shows as a coloured ring around your dot and as a message in the chat.</li>
             <li><strong>Pin Where I Am</strong> or <strong>Pin Somewhere Else</strong>: for somewhere else, move the map until the pin in the middle is on the place, then tap ✓. Choose what it is: danger, shelter, water, first aid or meeting point, with a few words.</li>
           </ul>
-          <p>You can also touch and hold the map to put a pin there. A pin stands just above its place on a short stem, so whoever is on that spot still shows underneath, with their name. Tap a person or a pin for details; anyone can take a pin off.</p>
+          <p>You can also touch and hold the map to put a pin there. A pin stands just above its place on a short stem, so whoever is on that spot still shows underneath, with their name. Tap a person or a pin for details. Only whoever put a pin, or sent a location, can take it off: <strong>🗑</strong> on its card takes it off everyone’s map.</p>
           <p><strong>Your location:</strong> Arke runs the GPS only while <strong>Share My Location</strong> is on in some chat; turn it off and the GPS stops. Opening a map doesn’t switch it on. When you tap something that needs where you are (➤, OK, Danger, Help, Pin Where I Am, Around Me), Arke asks the GPS for one position and stops it again.</p>
+          <p><strong>The map’s tabs:</strong> the small 💬 📶 📡 at the top right choose how what you do on the map goes — how you are, a pin, taking one off — just like the chat’s tabs. It starts on the tab you were in. In SMS, your messages app opens with it. The map itself shows everything, from every tab.</p>
+          <p><strong>Locations sent in the chat</strong> (📍 My Location) stay on the map as a 📍 with the sender’s name, until that message is deleted or they send a newer one.</p>
           <p>At the top, <strong>➤</strong> brings the map back to where you are, and <strong>⤢ See Everyone</strong> fits everyone and every pin on the screen at once. A place or a pin in a message opens the map right there.</p>
         </div>
         <figure>
@@ -500,7 +507,7 @@ nav.top a:not(.home):hover, nav.top a[aria-current] { color: var(--neon); }
             <li>If the phone asks for a PIN, it’s on the radio’s screen, or 123456 on radios without a screen.</li>
             <li>Tap <strong>Set Up for Arke</strong>: Arke sets the region for your country (you can change it), a mode and a channel for its encrypted messages.</li>
           </ol>
-          <p>When the radio is ready, the Radio icon turns green. Arke reconnects to it whenever it’s in range. Your messages go out on it sealed. Messages that reach your phone other ways are passed on to the radio too.</p>
+          <p>When the radio is ready, the Radio icon turns green. Arke reconnects to it whenever it’s in range. Messages written in the <strong>Mesh</strong> tab go out on it sealed, and Mesh messages that reach your phone other ways are passed on to the radio too. Other tabs’ messages stay off the radio, to save its airtime.</p>
           <h3>Radio chats</h3>
           <p><strong>✎ → New Radio Chat</strong> makes a chat on an ordinary Meshtastic channel, so you can talk with people who use the Meshtastic app or a radio with a keyboard (like a T-Deck). These messages aren’t end-to-end encrypted: on the open channel anyone nearby with Meshtastic can read them; on a private channel, only radios with its key.</p>
           <div class="note"><p><strong>Licensed (amateur radio) mode.</strong> Amateur radio rules don’t allow encrypted messages, so Arke doesn’t send its sealed messages on a radio in that mode, and says so. Plain-text radio chats still work.</p></div>
@@ -583,7 +590,8 @@ nav.top a:not(.home):hover, nav.top a[aria-current] { color: var(--neon); }
             <tr><td>Join a chat</td><td>✎ → Join a Chat → Scan QR Code, or tap the invite link</td></tr>
             <tr><td>Join from copied text</td><td>✎ → Join a Chat → Paste</td></tr>
             <tr><td>Send</td><td>Type → arrow</td></tr>
-            <tr><td>Send as SMS</td><td>Type → message bubble next to the arrow</td></tr>
+            <tr><td>Choose how a message goes</td><td>The tabs above the message box: SMS, Data or Mesh</td></tr>
+            <tr><td>Send by SMS</td><td>SMS tab → type → Send</td></tr>
             <tr><td>React, reply, forward, edit, delete</td><td>Touch and hold the message</td></tr>
             <tr><td>See where a message went</td><td>Tap your message</td></tr>
             <tr><td>Share where you are, say how you are, put a pin</td><td>Chat → map → round button at the bottom</td></tr>
