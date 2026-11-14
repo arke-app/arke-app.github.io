@@ -189,8 +189,8 @@ nav.top a:not(.home):hover, nav.top a[aria-current] { color: var(--neon); }
   <p class="lede">Arke is an encrypted group chat that sends every message every way it can at the same time: as a text message, over the internet, from phone to phone over Bluetooth and Wi-Fi, and over a Meshtastic® radio. More ways mean more chances to get through — but no way is a promise. Whatever the network, only people in the chat can read them. iPhone and Android phones can be in the same chat.</p>
 
   <div class="tour">
-    <video controls preload="metadata" poster="img/poster.jpg?v=14" src="../media/Arke-Tour.mp4?v=14"></video>
-    <img class="print-only" src="img/poster.jpg?v=14" alt="Opening frame of the Arke video tour">
+    <video controls preload="metadata" poster="img/poster.jpg?v=15" src="../media/Arke-Tour.mp4?v=15"></video>
+    <img class="print-only" src="img/poster.jpg?v=15" alt="Opening frame of the Arke video tour">
     <p>Video tour, 2 minutes 57 seconds, narrated. It starts a chat, invites people with a QR code, and sends a message on all four networks.</p>
   </div>
 </header>
@@ -293,7 +293,9 @@ nav.top a:not(.home):hover, nav.top a[aria-current] { color: var(--neon); }
         <div>
           <ol class="steps">
             <li>Tap <strong>✎</strong> (top right), then <strong>New Chat</strong>.</li>
-            <li>Type a name, for example <em>Neighbours</em>, and tap <strong>Create</strong>. A new 256-bit key is made on your phone, just for this chat.</li>
+            <li>Type a name, for example <em>Neighbours</em>.</li>
+            <li>Under <strong>Internet Relay</strong> you see the server the chat will use (the one in Settings, normally NeedToApp’s). To put this chat on another, tap <strong>Edit</strong> and type it, for example <code>ntfy.sh</code> or your own (chapter 10).</li>
+            <li>Tap <strong>Create</strong>. A new 256-bit key is made on your phone, just for this chat.</li>
             <li>The invite opens straight away (next step).</li>
           </ol>
           <p>The same menu has <strong>Join a Chat</strong> and <strong>New Radio Chat</strong> (chapter 09). The chat name is only a label: each person can rename their copy without changing anything for the others.</p>
@@ -327,7 +329,7 @@ nav.top a:not(.home):hover, nav.top a[aria-current] { color: var(--neon); }
       <h3>People and chat info</h3>
       <div class="pair">
         <div>
-          <p>The <strong>people</strong> icon in a chat lists everyone Arke has heard from in it, with how they are and when they were last heard. The <strong>ⓘ</strong> icon opens chat info: invite people, rename the chat, the numbers that get your SMS (chapter 06), the safety code, and <strong>Delete Chat</strong>, which deletes the key and the messages from your phone. Coming back needs a new invite from someone in the chat.</p>
+          <p>The <strong>people</strong> icon in a chat lists everyone Arke has heard from in it, with how they are and when they were last heard. The <strong>ⓘ</strong> icon opens chat info: invite people, rename the chat, the numbers that get your SMS (chapter 06), the safety code, the chat’s internet relay server, and <strong>Delete Chat</strong>, which deletes the key and the messages from your phone. Coming back needs a new invite from someone in the chat.</p>
           <p>Every chat you start or join appears in the list, newest message first, with the number of unread messages. A message only shows up in the chat whose key opens it. On its way it may pass through phones that aren’t in that chat: they carry it but can’t read it.</p>
         </div>
         <figure>
@@ -424,7 +426,7 @@ nav.top a:not(.home):hover, nav.top a[aria-current] { color: var(--neon); }
       <p class="intro">SMS needs only a mobile signal, which often comes back before mobile data does, and reaches people who are far away.</p>
       <ol class="steps">
         <li>Put your number in <strong>⚙︎ Settings</strong>. Arke sends it, sealed, to the people in your chats, and they send you theirs. That’s how Arke knows who to text.</li>
-        <li>Type your message and tap the <strong>message bubble</strong> next to Send. Your messages app opens with the text and the numbers of everyone in the chat who gave theirs, plus any number added in chat info under <strong>SMS To</strong>. Tap <strong>Send</strong> there.</li>
+        <li>Type your message and tap the <strong>message bubble</strong> next to Send. Your messages app opens with the text and the numbers of everyone in the chat who gave theirs, (chat info shows them under <strong>SMS To</strong>). Tap <strong>Send</strong> there.</li>
         <li>To send an earlier message by SMS, touch and hold it and tap <strong>Send as SMS</strong>.</li>
       </ol>
       <p>The text holds the sealed message as a link, <code>https://arke-app.github.io/m/#…</code>. The person taps it and the message opens in the chat in Arke. What the link carries comes after the <code>#</code>, which never reaches the website. If the link can’t be tapped, copy the whole text, then in Arke tap <strong>✎ → Join a Chat → Paste</strong>.</p>
@@ -521,7 +523,8 @@ nav.top a:not(.home):hover, nav.top a[aria-current] { color: var(--neon); }
             <li>The NeedToApp server keeps messages for <strong>48 hours</strong> (photos and files for 3), so a phone that was offline catches up when it comes back.</li>
             <li>Messages written while offline wait and go out as soon as there is internet again.</li>
           </ul>
-          <p>In <strong>⚙︎ Settings → Internet Relay</strong> you can turn the internet off for Arke, or put in ntfy.sh or your own ntfy server. New chats use the server set there and take it in their invite, so everyone in a chat uses the same one. Chats you’re already in keep theirs.</p>
+          <p><strong>Each chat has its own server.</strong> When you make a chat it starts on the one in <strong>⚙︎ Settings → Internet Relay</strong>; tap <strong>Edit</strong> to put that chat on another (ntfy.sh, or your own ntfy server). The invite carries it, so everyone in the chat uses the same one, and it stays for the life of the chat. You can be in chats on different servers at the same time: a family chat on your own server, a neighbours’ chat on NeedToApp’s. Chat info (ⓘ) shows which one a chat uses.</p>
+          <p>In Settings you can also turn the internet off for Arke.</p>
         </div>
         <figure>
           <img src="img/relay.jpg" alt="Internet Relay: Send over the Internet on, the NeedToApp server, working" loading="lazy">
@@ -553,7 +556,7 @@ nav.top a:not(.home):hover, nav.top a[aria-current] { color: var(--neon); }
           <thead><tr><th>Problem</th><th>Try this</th></tr></thead>
           <tbody>
             <tr><td>SMS is grey (unavailable)</td><td>Put your phone number in ⚙︎ Settings. A phone with no SIM card can’t send SMS.</td></tr>
-            <tr><td>The SMS goes to nobody</td><td>The others haven’t put their number in Settings yet, or haven’t been heard since. Add numbers by hand in chat info → SMS To.</td></tr>
+            <tr><td>The SMS goes to nobody</td><td>The others haven’t put their number in Settings yet, or haven’t been heard since. Ask them to put it in ⚙︎ Settings → Your Phone Number.</td></tr>
             <tr><td>Tapping an SMS link opens the browser</td><td>Tap <strong>Open in Arke</strong> on the page. Make sure Arke is installed on that phone.</td></tr>
             <tr><td>No Arke phones in range</td><td>Both phones need Arke open (iPhone), Bluetooth on, and Local Network (iPhone) or Nearby devices (Android) allowed.</td></tr>
             <tr><td>“This message is for a chat you’re not in”</td><td>The SMS link belongs to a chat you haven’t joined. Ask for an invite.</td></tr>
@@ -589,7 +592,7 @@ nav.top a:not(.home):hover, nav.top a[aria-current] { color: var(--neon); }
             <tr><td>Check the safety code</td><td>Top of the chat, or chat → ⓘ</td></tr>
             <tr><td>Your number for SMS</td><td>⚙︎ Settings → Your Phone Number</td></tr>
             <tr><td>Link a Meshtastic radio</td><td>⚙︎ Settings → Meshtastic Radio → Search for Radios</td></tr>
-            <tr><td>Change the relay server</td><td>⚙︎ Settings → Internet Relay</td></tr>
+            <tr><td>Put a chat on another relay server</td><td>✎ → New Chat → Internet Relay → Edit (the default for new chats: ⚙︎ Settings → Internet Relay)</td></tr>
             <tr><td>Switch a network off</td><td>Tap the network icons → touch and hold a network</td></tr>
             <tr><td>Delete a chat</td><td>Chat → ⓘ → Delete Chat</td></tr>
           </tbody>
