@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Join an Arke chat</title>
+<link rel="icon" href="../manual/img/icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Arke">
+<meta property="og:title" content="Join a chat on Arke">
+<meta property="og:description" content="An invite to an encrypted Arke chat. Tap to open it in Arke.">
+<meta property="og:url" content="https://arke-app.github.io/join/">
+<meta property="og:image" content="https://arke-app.github.io/m/preview.png">
+<meta property="og:image:width" content="96">
+<meta property="og:image:height" content="96">
+<meta name="twitter:card" content="summary">
+<link rel="apple-touch-icon" href="../manual/img/icon.png">
+<link rel="stylesheet" href="../fonts/fonts.css">
+<link rel="stylesheet" href="../site.css">
+</head>
+<body>
+<div class="wrap">
+<nav class="top">
+  <a class="home" href="../"><img src="../manual/img/icon.png" alt="">Arke</a>
+</nav>
+<img class="hero-icon" src="../manual/img/icon.png" alt="Arke app icon">
+<h1>Join an Arke chat</h1>
+<p class="lede">If Arke didn't open by itself, tap Open in Arke. Don't have it yet? Get Arke, then tap the invite link again.</p>
+<div class="buttons">
+  <a class="btn primary" id="open" href="#">Open in Arke</a>
+  <a class="btn" href="../">Get Arke</a>
+</div>
+<p>This link carries the chat's secret key: share it only with people you want in the chat. This page only hands it to the app: it never reaches this website.</p>
+<footer>Arke · encrypted chat with four ways through, for iPhone and Android · End-to-end encrypted · No ads · No tracking</footer>
+</div>
+<script>
+// The invite is after the #: it never reaches this site. Handed on to the app as arke://join?….
+var data = location.hash.slice(1);
+var app = "arke://join?" + data;
+document.getElementById("open").href = app;
+if (data) location.replace(app);
+</script>
+</body>
+</html>
