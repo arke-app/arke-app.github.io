@@ -214,6 +214,7 @@ nav.top a:not(.home):hover, nav.top a[aria-current] { color: var(--neon); }
       <li><a href="#trouble">Troubleshooting</a></li>
       <li><a href="#reference">Quick reference</a></li>
       <li><a href="#legal">Safety and legal</a></li>
+      <li><a href="#safe">Staying safe</a></li>
     </ol>
   </nav>
 
@@ -335,6 +336,9 @@ nav.top a:not(.home):hover, nav.top a[aria-current] { color: var(--neon); }
         </div>
       </div>
 
+      <h3>Joined by a link: be careful</h3>
+      <p>Scanning a QR code is face to face, so you know who invited you. A link can come from anyone. When you open an invite link, Arke says <strong>“Only join if you know who sent you this link. Arke never asks for codes, passwords or money.”</strong> A chat you joined by a link shows an orange note at the top until you tap <strong>I Know Them</strong>; in it, a message that asks for a code, a PIN, a password, an IBAN, MB WAY or another payment, or that has a web link, gets <strong>“Careful: Arke never asks for codes, passwords or money.”</strong> under it. Arke checks this on your phone only: nothing is sent anywhere. Not sure? Tap <strong>Leave and Block</strong> (chapter 15).</p>
+
       <h3>Join with a copied link</h3>
       <p>If an invite link can’t be tapped, for example because it was pasted into a note, copy it, then in Arke tap <strong>✎ → Join a Chat → Paste</strong>. An Arke invite in a chat message is underlined: tap it and Arke asks <strong>Join …?</strong> straight away. On iPhone you can also share a link from another app to <strong>Arke</strong> and pick a chat: it goes there as a message.</p>
 
@@ -347,7 +351,7 @@ nav.top a:not(.home):hover, nav.top a[aria-current] { color: var(--neon); }
       <h3>People and chat info</h3>
       <div class="pair">
         <div>
-          <p>The <strong>people</strong> icon in a chat lists everyone Arke has heard from in it, with how they are and when they were last heard. The <strong>ⓘ</strong> icon opens chat info: invite people, rename the chat, your number in this chat, the numbers that get your SMS (chapter 06), the safety code, the chat’s internet relay server, and <strong>Delete Chat</strong>, which deletes the key and the messages from your phone. Coming back needs a new invite from someone in the chat.</p>
+          <p>The <strong>people</strong> icon in a chat lists everyone Arke has heard from in it, with how they are and when they were last heard. The <strong>ⓘ</strong> icon opens chat info: invite people, rename the chat, your number in this chat, the numbers that get your SMS (chapter 06), the safety code, the chat’s internet relay server, and <strong>Delete Chat</strong>, which deletes the key and the messages from your phone. Coming back needs a new invite from someone in the chat. <strong>Delete and Block</strong> also keeps that chat’s messages away for good: they aren’t shown or carried, and if its invite comes again, Arke reminds you that you blocked it.</p>
           <p>Every chat you start or join appears in the list, newest message first, with the number of unread messages. A message only shows up in the chat whose key opens it. On its way it may pass through phones that aren’t in that chat: they carry it but can’t read it.</p>
         </div>
         <figure>
@@ -379,11 +383,13 @@ nav.top a:not(.home):hover, nav.top a[aria-current] { color: var(--neon); }
       <h3>What it doesn’t protect against</h3>
       <ul>
         <li><strong>Someone with the invite.</strong> Everyone with the key can read the whole chat and write in it. If an invite gets out, start a new chat and delete the old one.</li>
-        <li><strong>Names aren’t verified.</strong> Anyone in the chat could type any name. Recognise people by what they write.</li>
+        <li><strong>Names aren’t verified.</strong> Everyone in a chat shares its key, so anyone in the chat could write under someone else’s name. Recognise people by what they write, and check anything unusual (a request for money, a code) another way, for example by calling them.</li>
         <li><strong>A lost key opens old messages.</strong> The key doesn’t change over time, so someone who gets it later can also read messages they collected earlier. Keep your phone locked.</li>
         <li><strong>Others can tell a message was sent.</strong> Carriers see that a message exists, its size and roughly when it was sent, but not what it says.</li>
         <li><strong>Radio chats</strong> (chapter 09) are ordinary Meshtastic channel messages, not end-to-end encrypted like your other chats. Each one says so at the top.</li>
       </ul>
+      <h3>Check it yourself</h3>
+      <p>The part of Arke that seals and opens messages is public: <a href="https://github.com/arke-app/arke-protocol">github.com/arke-app/arke-protocol</a>. It has the whole message format byte by byte, the code the iPhone and Android apps run for it, test messages anyone can check, and this same list of what Arke does and doesn’t protect. You don’t have to take our word for it.</p>
     </section>
 
     <!-- 05 -->
@@ -478,6 +484,7 @@ nav.top a:not(.home):hover, nav.top a[aria-current] { color: var(--neon); }
         <li>What you write in the Nearby tab goes only to phones nearby; messages from the other tabs don’t go this way.</li>
         <li><strong>Every Arke phone is a carrier.</strong> It keeps every sealed message it meets, from any chat, and hands it to every Arke phone it meets later. A message can walk across town in a neighbour’s pocket.</li>
         <li>Carried messages expire after <strong>48 hours</strong>. Each phone carries up to 500 messages, dropping the oldest first.</li>
+        <li><strong>No internet? A phone nearby can post it for you.</strong> A message in the Data tab that’s waiting for the internet is also handed, still sealed, to Arke phones nearby. One in the same chat posts it to the internet relay; a stranger’s phone does it only if its owner turned on <strong>Pass On for Others</strong> (chapter 10). Either way the other phone can’t open it.</li>
         <li>On iPhone, messages pass between iPhones while Arke is open (with 🔒, Android phones keep reaching it with the screen locked). On Android, with 🔒, Arke keeps running in the background with a notification, looking for phones in low power with the screen off to save the battery.</li>
       </ul>
     </section>
@@ -497,7 +504,11 @@ nav.top a:not(.home):hover, nav.top a[aria-current] { color: var(--neon); }
           <p>You can also touch and hold the map to put a pin there. A pin stands just above its place on a short stem, so whoever is on that spot still shows underneath, with their name. Tap a person or a pin for details. Only whoever put a pin, or sent a location, can take it off: <strong>🗑</strong> on its card takes it off everyone’s map.</p>
           <p><strong>Your location:</strong> Arke runs the GPS only while <strong>Share My Location</strong> is on in a chat that’s open, or that has 🔒; turn it off and the GPS stops. Opening a map doesn’t switch it on. When you tap something that needs where you are (➤, OK, Danger, Help, Pin Where I Am, Around Me), Arke asks the GPS for one position and stops it again.</p>
           <p><strong>The map’s tabs:</strong> the small 💬 📶 📱 📡 at the top right choose how what you do on the map goes — how you are, a pin, taking one off — just like the chat’s tabs. It starts on the tab you were in. In SMS, your messages app opens with it. The map itself shows everything, from every tab.</p>
-          <p><strong>Locations sent in the chat</strong> (📍 My Location) stay on the map as the sender’s ball with a grey ring, until that message is deleted or they send a newer one. Tap it to see when, and the networks they could use then.</p>
+          <p><strong>Each person shows once</strong>, at the newest place known for them: their live position, their status, or a location they sent (📍 My Location, a ball with a grey ring). Tap a location sent to see when, and the networks they could use then.</p>
+          <p><strong>Follow someone:</strong> tap their ball, then <strong>Follow</strong> (the location arrow) on their card. The map keeps them in the middle as they move. Zoom as you like; drag the map to stop following.</p>
+          <p><strong>Trails:</strong> turn on <strong>Trails</strong> in Map Options to see where everyone sharing their location went in the last day, as a line in their colour. Poor GPS fixes (worse than 50 m), impossible jumps and small wobbles are left out, so the line follows where people really went. <strong>Clear</strong> forgets them on your phone.</p>
+          <p><strong>Who put a pin:</strong> every pin has a small ball in the colour of the person who put it.</p>
+          <p><strong>Send Map by SMS:</strong> what you do in the Data tab doesn’t reach people who only get SMS. The button at the bottom of Map Options sends the whole map in one text message: every pin, the pins taken off lately, and everyone’s last place and status. It turns orange (“someone missed changes”) when someone only SMS reaches lately and the map has changed since.</p>
           <p>At the top, <strong>➤</strong> brings the map back to where you are, and <strong>⤢ See Everyone</strong> fits everyone, every location sent and every pin on the screen at once. A place or a pin in a message opens the map right there.</p>
         </div>
         <figure>
@@ -562,6 +573,7 @@ nav.top a:not(.home):hover, nav.top a[aria-current] { color: var(--neon); }
           </ul>
           <p><strong>Each chat has its own server.</strong> When you make a chat it starts on the one in <strong>⚙︎ Settings → Internet Relay</strong>; tap <strong>Edit</strong> to put that chat on another (ntfy.sh, or your own ntfy server). The invite carries it, so everyone in the chat uses the same one, and it stays for the life of the chat. You can be in chats on different servers at the same time: a family chat on your own server, a neighbours’ chat on NeedToApp’s. Chat info (ⓘ) shows which one a chat uses.</p>
           <p>In Settings you can also turn the internet off for Arke.</p>
+          <p><strong>Pass On for Others</strong> (⚙︎ Settings → Internet Relay, off unless you turn it on): when an Arke phone nearby has no internet, it can hand yours its sealed messages to put on the relay, for chats you’re not in. You can’t read them or see who’s talking. At most 120 an hour, text only (no photos or files), and only to the NeedToApp server.</p>
         </div>
         <figure>
           <img src="img/relay.jpg" alt="Internet Relay: Send over the Internet on, the NeedToApp server, working" loading="lazy">
@@ -666,6 +678,48 @@ nav.top a:not(.home):hover, nav.top a[aria-current] { color: var(--neon); }
           <figcaption>⚙︎ Settings → About Arke.</figcaption>
         </figure>
       </div>
+    </section>
+
+    <!-- 15 -->
+    <section class="ch" id="safe">
+      <h2><span class="num">15</span>Staying safe</h2>
+      <p class="intro">Arke is built so that nobody but the people in a chat can read it — not us, not the relay server, not the phones and radios that carry it. Here is what that means in practice, what Arke asks your phone for and why, and how to spot a scam.</p>
+
+      <h3>What we can’t see</h3>
+      <ul>
+        <li><strong>No account.</strong> No sign-up, no email, no phone-number check. Your name and number stay on your phone and go only to the chats you choose.</li>
+        <li><strong>No analytics, no ads, no tracking.</strong> Arke doesn’t collect data about you or how you use it.</li>
+        <li><strong>Messages are sealed on your phone.</strong> The relay server only ever gets sealed messages and keeps them 48 hours at most; its logs are kept 7 days at most.</li>
+        <li><strong>Check it yourself:</strong> the sealing code and the message format are public (chapter 04).</li>
+      </ul>
+
+      <h3>What Arke asks for, and why</h3>
+      <p>Arke asks only when you first use something that needs it, and works without whatever you say no to.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Permission</th><th>What for</th><th>What it isn’t used for</th></tr></thead>
+          <tbody>
+            <tr><td>Location</td><td>Share My Location, OK / Danger / Help with where you are, a pin where you are, offline maps around you. The GPS runs only while you share, in an open chat (or with 🔒).</td><td>Never sent anywhere but the chats you choose; never in the background unless you turn on 🔒.</td></tr>
+            <tr><td>Bluetooth</td><td>Phones nearby and the Meshtastic radio.</td><td>Not to find out who’s around you: Arke only talks to Arke phones and your radio.</td></tr>
+            <tr><td>Local network (iPhone)</td><td>Phones nearby between iPhones (peer-to-peer Wi-Fi).</td><td>Arke doesn’t look at other devices on your network.</td></tr>
+            <tr><td>Camera</td><td>Scanning a chat’s QR code.</td><td>Only while the scanner is on screen. Photos you send are ones you pick.</td></tr>
+            <tr><td>Microphone</td><td>Voice messages, while you hold the button.</td><td>Never in the background.</td></tr>
+            <tr><td>Photos (save)</td><td>Saving a photo someone sent, when you tap Save.</td><td>Arke can’t see your photo library; you pick what to send.</td></tr>
+            <tr><td>Notifications</td><td>New messages.</td><td>A push brings only the sealed message: Arke opens it on your phone to show the notification. Apple and Google never see what it says.</td></tr>
+            <tr><td>Android: run in the background, battery</td><td>Keeping phones nearby and the radio going with the screen off, when you turn on 🔒.</td><td>Only while 🔒 is on somewhere; a notification says so.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Arke doesn’t ask for your contacts, your SMS or your calls. SMS go out from your own messages app, and only when you tap Send there.</p>
+
+      <h3>Scams</h3>
+      <ul>
+        <li><strong>Arke never asks for codes, passwords, PINs or money.</strong> Not by SMS, not in a chat, not by phone. Anyone who does is not Arke.</li>
+        <li><strong>Only join chats from people you know.</strong> Scanning the QR code face to face is the safest. An invite link from a stranger is a reason to say no.</li>
+        <li><strong>Someone in a chat asks for money or a code?</strong> Check with them another way first, for example by calling. Anyone in a chat can write under any name.</li>
+        <li><strong>Arke’s links</strong> start with <code>https://arke-app.github.io/</code>. A message link opens only for people in that chat; an invite link joins a chat, and Arke always asks first.</li>
+        <li><strong>Leave and Block</strong> (the orange note in a chat joined by a link) or <strong>Delete and Block</strong> (when you delete a chat): the chat goes, and its messages never come back to your phone.</li>
+      </ul>
     </section>
   </main>
 </div>

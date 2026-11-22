@@ -33,7 +33,9 @@
 <h2>Other networks</h2>
 <ul>
   <li><strong>Text message (SMS).</strong> A message you send as an SMS goes through your messages app and your mobile operator, as a link holding the sealed message. Your operator sees the phone numbers involved, as for any text. Arke never reads your text messages: you open an Arke message by tapping its link.</li>
-  <li><strong>Phones nearby.</strong> Sealed messages pass between phones over Bluetooth and Wi-Fi. Other Arke phones can carry them without being able to read them.</li>
+  <li><strong>Phones nearby.</strong> Sealed messages pass between phones over Bluetooth and Wi-Fi. Other Arke phones can carry them without being able to read them. When you have no internet, a message waiting for it is also handed, sealed, with its chat's relay topic, to Arke phones nearby, so one with internet can post it to the relay for you; that phone can't read it.</li>
+  <li><strong>Pass On for Others</strong> (off unless you turn it on). Your phone posts to the NeedToApp relay sealed messages that Arke phones nearby without internet hand it, for chats you're not in — at most 120 an hour, text only. You can't read them; the relay sees your phone's internet address posting them, as it does for your own.</li>
+  <li><strong>Scam warnings.</strong> Arke checks messages for things scams ask for (codes, passwords, payments, links) on your phone only, to show a warning. Nothing is sent anywhere.</li>
   <li><strong>Meshtastic® radio.</strong> Your chats' sealed messages go over LoRa radio, which anyone nearby can receive but not read. Radio chats are different, by design: they're ordinary Meshtastic channel messages, readable by other Meshtastic radios on that channel (anyone, on the open channel). They aren't end-to-end encrypted like your other chats, and each radio chat says so at the top.</li>
 </ul>
 <h2>Maps</h2>
