@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Radio channel for Arke</title>
+<link rel="icon" href="../manual/img/icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Arke">
+<meta property="og:title" content="A radio channel for Arke">
+<meta property="og:description" content="A private channel for a Meshtastic® radio chat in Arke. Tap to open it in Arke.">
+<meta property="og:url" content="https://arke-app.github.io/channel/">
+<meta property="og:image" content="https://arke-app.github.io/m/preview.png">
+<meta property="og:image:width" content="96">
+<meta property="og:image:height" content="96">
+<meta name="twitter:card" content="summary">
+<link rel="apple-touch-icon" href="../manual/img/icon.png">
+<link rel="stylesheet" href="../fonts/fonts.css">
+<link rel="stylesheet" href="../site.css">
+</head>
+<body>
+<div class="wrap">
+<nav class="top">
+  <a class="home" href="../"><img src="../manual/img/icon.png" alt="">Arke</a>
+</nav>
+<img class="hero-icon" src="../manual/img/icon.png" alt="Arke app icon">
+<h1>A radio channel for Arke</h1>
+<p class="lede">If Arke didn't open by itself, tap Open in Arke. Don't have it yet? Get Arke, then tap the channel link again.</p>
+<div class="buttons">
+  <a class="btn primary" id="open" href="#">Open in Arke</a>
+  <a class="btn" href="../">Get Arke</a>
+</div>
+<p>This link carries the channel's key: anyone with it can read and write on the channel, so share it only with people you trust. This page only hands it to the app: it never reaches this website.</p>
+<footer>Arke · encrypted chat with four ways through, for iPhone and Android · End-to-end encrypted · No ads · No tracking<br><small><a href="https://meshtastic.org">Meshtastic®</a> is a registered trademark of Meshtastic LLC. Meshtastic software components are released under various licenses, see <a href="https://github.com/meshtastic">GitHub</a> for details. No warranty is provided - use at your own risk. Arke is not affiliated with or endorsed by the Meshtastic project.</small></footer>
+</div>
+<script>
+// The channel is after the #: it never reaches this site. Handed on to the app as arke://channel#….
+var data = location.hash.slice(1);
+var app = "arke://channel#" + data;
+document.getElementById("open").href = app;
+if (data) location.replace(app);
+</script>
+</body>
+</html>
